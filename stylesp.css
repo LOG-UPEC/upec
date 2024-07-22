@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    top: 0.1%; /* Ajuste el valor para que esté más abajo */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Select product1.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+}
+
+nav ul {
+    list-style: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.inicio-buttons {
+    position: absolute;
+    top: 78.5%;
+    left: 66.5%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inicio-buttons button {
+    padding: 15px 120px;
+    border: none;
+    border-radius: 14px;
+    background-color: #F98B40;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.inicio-buttons button:hover {
+    background-color: #FF8064;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    nav ul {
+        top: 10px;
+        left: 10px;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .auth-buttons button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        top: 10px;
+        left: 10px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        bottom: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+
+    .auth-buttons button {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        top: 5px;
+        left: 5px;
+        gap: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 3px 0;
+    }
+
+    nav ul li a {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        bottom: 5px;
+        right: 5px;
+        gap: 5px;
+    }
+
+    .auth-buttons button {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+}
+
+
+    .auth-buttons button {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+}
+

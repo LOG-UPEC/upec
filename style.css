@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fondo claro para contraste */
+    color: #333; /* Color de texto principal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: #4285f4; /* Color azul */
+    padding: 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Blanco */
+    font-weight: bold;
+    padding: 20px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con transparencia */
+}
+
+header {
+    width: 100%;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%; /* Asegurar que ocupe toda la altura */
+}
+
+header .info {
+    color: #333;
+    max-width: 600px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .info h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #4285f4; /* Color azul */
+}
+
+header .info p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    width: 50%; /* Ajustar tamaño del logo para ocupar más espacio */
+    height: auto;
+}
+
+.auth-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+}
+
+.auth-buttons button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4285f4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+}
+
+/* Estilos específicos para el botón "Inicio" */
+.inicio-btn {
+    background-color: #01266D; /* Color diferente para el botón Inicio */
+    font-size: 1.4rem; /* Tamaño de fuente diferente */
+    padding: 16px 42px; /* Tamaño de padding diferente */
+    color: #ffffff; /* Color de texto */
+    border-radius: 9px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s; /* Transición para el cambio de color y escala */
+}
+
+.inicio-btn:hover {
+    background-color: #77A5FF; /* Color diferente al pasar el cursor */
+    transform: scale(1.1); /* Aumenta el tamaño del botón "Inicio" */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    header .info {
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    header .info h1 {
+        font-size: 3.1rem;
+    }
+
+    header .info p {
+        font-size: 1.8rem;
+    }
+
+    header .logo {
+        width: 80%;
+    }
+
+    .inicio-btn {
+        font-size: 2.1rem; /* Tamaño de fuente diferente */
+        padding: 9px 28px; /* Tamaño de padding diferente */
+    }
+
+    .auth-buttons button {
+        padding: 8px 11px;
+        font-size: 0.56rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .info h1 {
+        font-size: 2rem;
+    }
+
+    header .info p {
+        font-size: 0.5rem;
+    }
+
+    header .logo {
+        width: 100%;
+    }
+
+    .auth-buttons button {
+        padding: 6px 10px;
+        font-size: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.5rem;
+        padding: 6px 8px;
+    }
+}
